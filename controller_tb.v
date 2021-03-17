@@ -25,7 +25,7 @@ end
 assign cmp = ( hold >= value);
 
 initial begin
-    $monitor($time, "go=%b valid=%b result=%b sample=%b value=%b cmp=%b state=%b mask=%b", go,valid,result,sample,value,cmp,c.state,c.mask);
+    $monitor($time, "\tgo=%b \tvalid=%b \tresult=%b \tsample=%b \tvalue=%b \tcmp=%b \tstate=%b \tmask=%b", go,valid,result,sample,value,cmp,c.state,c.mask);
     #100; go=0;#100; go=1;
     #5000; go=0;#5000; go=1;
     #40; go=0;
